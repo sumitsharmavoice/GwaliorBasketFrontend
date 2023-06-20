@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# React-Project-Gwaliorbasket
+# GwaliorBasketFrontend
 This is First React Project .
 =======
 # Getting Started with Create React App
