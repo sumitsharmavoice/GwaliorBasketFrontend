@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/GwaliorBasketFrontend/static/css/main.da7ad22d.css",
+    "main.js": "/GwaliorBasketFrontend/static/js/main.50c96017.js",
+    "static/js/787.8511cac9.chunk.js": "/GwaliorBasketFrontend/static/js/787.8511cac9.chunk.js",
+    "static/media/slick.svg": "/GwaliorBasketFrontend/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/GwaliorBasketFrontend/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/GwaliorBasketFrontend/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "index.html": "/GwaliorBasketFrontend/index.html",
+    "static/media/slick.woff": "/GwaliorBasketFrontend/static/media/slick.295183786cd8a1389865.woff",
+    "main.da7ad22d.css.map": "/GwaliorBasketFrontend/static/css/main.da7ad22d.css.map",
+    "main.50c96017.js.map": "/GwaliorBasketFrontend/static/js/main.50c96017.js.map",
+    "787.8511cac9.chunk.js.map": "/GwaliorBasketFrontend/static/js/787.8511cac9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da7ad22d.css",
+    "static/js/main.50c96017.js"
+  ]
+}
