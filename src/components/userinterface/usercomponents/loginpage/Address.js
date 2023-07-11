@@ -1,6 +1,6 @@
 import { CloseRounded } from "@mui/icons-material";
 import { Dialog, DialogContent, Grid, TextField, useMediaQuery } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { postData } from "../../../services/ServerServices";
 
 const Address = (props) => {
@@ -12,11 +12,14 @@ const Address = (props) => {
   const [zipCode, setZipCode] = useState("");
   const [address, setAddress] = useState("");
   const [userId,setUserID]=useState(props.userData.userId)
-  
+  // alert("userdi",props.userData.mobilenumbernumber)
+  //  alert("MobileNumber>>>>>",mobileNumber)
   const handleClose = () => {
     props.setAddressState(false);
   };
+
   const handleClick =async () => {
+
     console.log("userid>>>>>>",userId)
 
     var body={"userid":userId,"fullname":fullName,"mobilenumber":mobileNumber,"city":city,"state":state,"zipcode":zipCode,"address":address}
@@ -33,6 +36,12 @@ const Address = (props) => {
       alert("Fail to Submit Address")
     }
   };
+
+  // console.log(props.userData,"propssssssssssss");
+  useEffect(()=>{
+    setMobileNumber(props.userData.mobilenumber)
+  },[props.addressState])
+
   return (
     <>
       <Dialog fullScreen={matches} PaperProps={{ style: { borderRadius: 6 } }} maxWidth="md" open={props.addressState} fullWidth aria-labelledby="responsive-dialog-title">
@@ -46,7 +55,7 @@ const Address = (props) => {
               <TextField onChange={(e) => setName(e.target.value)} fullWidth label="Full Name" />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TextField  onChange={(e) => setMobileNumber(e.target.value)} fullWidth label="Phone Number" />
+              <TextField value={mobileNumber}  onChange={(e) => setMobileNumber(e.target.value)} fullWidth label="Phone Number" />
             </Grid>
             <Grid item xs={12} md={4}>
               <TextField onChange={(e) => setState(e.target.value)} fullWidth label="State" />

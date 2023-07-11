@@ -89,7 +89,7 @@ export default function Cart() {
         </Grid>
       </div>
       <LoginDialog state={dialogState} setDialogState={setDialogState} setAddressState={setAddressState} userData={userData} setUserData={setUserData} />
-      <Address userData={userData} setUserData={setUserData} addressState={addressState} setAddressState={setAddressState} />
+      <Address userData={userData} setUserData={setUserData} addressState={addressState} setAddressState={setAddressState}  />
     </>
   );
 }

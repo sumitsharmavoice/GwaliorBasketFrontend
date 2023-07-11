@@ -44,15 +44,20 @@ export default function LoginDialog(props) {
   // OTP validation and navigating to cart page
   async function handleOTP() {
     if (testOtp == otp) { //alert("Correct")
-      var result = await postData("userinterface/add_new_user", { mobilenumber: number })
+      var result = await postData("userinterface/add_new_user", { mobilenumber: number, })
+      console.log(result.data,"dadfadsf");
       
-      console.log(result.status)
+      // console.log(result.status)
     if(result.status==0)
     {alert("server error")}
      else
      {
       if(result.status==2)
-      {props.setAddressState(true)}
+      {
+        props.setDialogState(false)
+        props.setAddressState(true)
+        props.setUserData({userid:result.data[0].userid,mobilenumber:result.data[0].mobilenumber}) 
+      }
       else if(result.status==1)
       {
         alert(result.message)
@@ -64,8 +69,10 @@ export default function LoginDialog(props) {
         }
         else
         {
-          props.setUserData({userid:result.data[0].userid,mobilenumber:result.data[0].mobilenumber}) 
+          // alert("UserId>>>>",result.data[0].userid)
+          // alert("MobileNumber>>>>",result.data[0].mobilenumber)
           props.setAddressState(true)
+          
         }
       }
      }

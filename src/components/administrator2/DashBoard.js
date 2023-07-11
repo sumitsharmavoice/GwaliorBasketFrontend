@@ -107,7 +107,7 @@ export default function DashBoard (props) {
 
                         </List>
                     </div>
-                </div>
+                </div> 
             </Grid>
             <Grid item xs={9} >
                 <div >
